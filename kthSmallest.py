@@ -38,3 +38,10 @@ def buildTree(values):
                 node.right = kids.pop()
 
     return root
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    root = [3,1,4,None,2]
+    k = 1
+    print("Output is : ", sol.kthSmallest(buildTree(root), k))
