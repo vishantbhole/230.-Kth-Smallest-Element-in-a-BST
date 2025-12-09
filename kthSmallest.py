@@ -22,3 +22,11 @@ class Solution:
         # print(res)
         return res[k - 1]
             
+# Helper function to build a binary tree from a list (BFS style)
+def buildTree(values):
+    if not values:
+        return None
+
+    nodes = [TreeNode(v) if v is not None else None for v in values]
+    kids = nodes[::-1]
+    root = kids.pop()
