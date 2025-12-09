@@ -14,3 +14,7 @@ class Solution:
         def inOrder(node):
             if not node or len(res) >= k:
                 return
+            inOrder(node.left)
+            if len(res) < k:
+                res.append(node.val)
+            inOrder(node.right)
