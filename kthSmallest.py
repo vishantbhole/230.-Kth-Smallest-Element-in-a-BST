@@ -30,3 +30,11 @@ def buildTree(values):
     nodes = [TreeNode(v) if v is not None else None for v in values]
     kids = nodes[::-1]
     root = kids.pop()
+    for node in nodes:
+        if node:
+            if kids:
+                node.left = kids.pop()
+            if kids:
+                node.right = kids.pop()
+
+    return root
