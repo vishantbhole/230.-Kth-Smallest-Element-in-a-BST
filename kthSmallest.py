@@ -18,3 +18,7 @@ class Solution:
             if len(res) < k:
                 res.append(node.val)
             inOrder(node.right)
+        inOrder(root)
+        # print(res)
+        return res[k - 1]
+            
