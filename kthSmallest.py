@@ -10,3 +10,7 @@ class TreeNode:
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
         res = []
+        
+        def inOrder(node):
+            if not node or len(res) >= k:
+                return
