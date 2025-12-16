@@ -11,3 +11,7 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+    def kthSmallest2(self, root: Optional[TreeNode], k: int) -> int:
+        stack = []
+        curr = root
